@@ -7,8 +7,7 @@ class Tunblkctl < Formula
   license "MIT"
 
   def install
-    prefix.install "tunblkctl-0.1.0.alpha/LICENSE", "tunblkctl-0.1.0.alpha/README.md"
     bin.mkpath
-    bin.install "tunblkctl-0.1.0.alpha/tunblkctl"
+    bin.install "tunblkctl"
   end
 end
