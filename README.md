@@ -1,4 +1,4 @@
-# Azhuchkov Tools
+# azhuchkov Tools
 
 ## How do I install these formulae?
 
