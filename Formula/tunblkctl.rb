@@ -6,6 +6,10 @@ class Tunblkctl < Formula
   sha256 "b7e9582cb8f68092025fb31de89e326a63702620bf36e8034923c2067ce53336"
   license "MIT"
 
+  head do
+    url "https://github.com/azhuchkov/tunblkctl.git", branch: "main"
+  end
+
   def install
     bin.mkpath
     bin.install "tunblkctl"
