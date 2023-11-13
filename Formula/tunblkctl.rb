@@ -1,9 +1,9 @@
 class Tunblkctl < Formula
   desc "Command-line frontend for Tunnelblick"
   homepage "https://github.com/azhuchkov/tunblkctl"
-  url "https://github.com/azhuchkov/tunblkctl/archive/refs/tags/v0.1.0.alpha.tar.gz"
-  version "0.1.0.alpha"
-  sha256 "b7e9582cb8f68092025fb31de89e326a63702620bf36e8034923c2067ce53336"
+  url "https://github.com/azhuchkov/tunblkctl/archive/refs/tags/v0.2.0.alpha.tar.gz"
+  version "0.2.0.alpha"
+  sha256 "e4d3dfb6a37e3575aa1ca907229b064e9ba7e6c4aea5adfc492f1ac2565d23c0"
   license "MIT"
 
   head do
@@ -11,7 +11,9 @@ class Tunblkctl < Formula
   end
 
   def install
+    prefix.install "libexec"
+
     bin.mkpath
-    bin.install "tunblkctl"
+    bin.install "bin/tunblkctl"
   end
 end
