@@ -1,9 +1,9 @@
 class Tunblkctl < Formula
   desc "Command-line frontend for Tunnelblick"
   homepage "https://github.com/azhuchkov/tunblkctl"
-  url "https://github.com/azhuchkov/tunblkctl/archive/refs/tags/v0.2.0.alpha.tar.gz"
-  version "0.2.0.alpha"
-  sha256 "e4d3dfb6a37e3575aa1ca907229b064e9ba7e6c4aea5adfc492f1ac2565d23c0"
+  url "https://github.com/azhuchkov/tunblkctl/archive/refs/tags/v0.3.0.alpha.tar.gz"
+  version "0.3.0.alpha"
+  sha256 "c80d78edfc32399f3b2e39b2621af97f9cea831306e03874237532d97af5cc89"
   license "MIT"
 
   head do
@@ -16,12 +16,10 @@ class Tunblkctl < Formula
     bin.mkpath
     bin.install "bin/tunblkctl"
     
-    if build.head?
-      bash_completion.install "completion/bash.sh" => "tunblkctl"
-      zsh_completion.install "completion/zsh.sh" => "_tunblkctl"
+    bash_completion.install "completion/bash.sh" => "tunblkctl"
+    zsh_completion.install "completion/zsh.sh" => "_tunblkctl"
 
-      man1.install "doc/man1/tunblkctl.1"
-    end
+    man1.install "doc/man1/tunblkctl.1"
   end
 
   def caveats
