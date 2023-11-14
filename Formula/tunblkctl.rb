@@ -15,5 +15,18 @@ class Tunblkctl < Formula
 
     bin.mkpath
     bin.install "bin/tunblkctl"
+    
+    if build.head?
+      bash_completion.install "completion/bash.sh" => "tunblkctl"
+      zsh_completion.install "completion/zsh.sh" => "_tunblkctl"
+
+      man1.install "doc/man1/tunblkctl.1"
+    end
+  end
+
+  def caveats
+    <<~EOS
+      It's necessary to restart the shell after the formula installation.
+    EOS
   end
 end
