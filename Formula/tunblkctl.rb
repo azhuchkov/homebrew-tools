@@ -1,9 +1,9 @@
 class Tunblkctl < Formula
   desc "Command-line frontend for Tunnelblick"
   homepage "https://github.com/azhuchkov/tunblkctl"
-  url "https://github.com/azhuchkov/tunblkctl/archive/refs/tags/v0.3.0.alpha.tar.gz"
-  version "0.3.0.alpha"
-  sha256 "c80d78edfc32399f3b2e39b2621af97f9cea831306e03874237532d97af5cc89"
+  url "https://github.com/azhuchkov/tunblkctl/archive/refs/tags/v0.3.0.tar.gz"
+  version "0.3.0"
+  sha256 "518262e395b3e3f9bae091c2cedc5e93c2c3a6a1ec7460440f73f05e7dcecec9"
   license "MIT"
 
   head do
