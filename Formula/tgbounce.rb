@@ -21,6 +21,20 @@ class Tgbounce < Formula
     venv.pip_install "telegram-text==0.1.2"
 
     libexec.install "tgbounce.py"
+
+    share.install ["config.ini", "bounces.json"]
+  end
+
+  def caveats
+    <<~EOS
+      Example configuration files have been installed to:
+        #{share}
+
+      To use these configurations, copy them to your home folder:
+        mkdir -m 0700 ~/.tgbounce/ && install -b -m 0600 #{share}/{config.ini,bounces.json} ~/.tgbounce/
+
+      Then run script manually as described below.
+    EOS
   end
 
   def tgbounce_log_path
