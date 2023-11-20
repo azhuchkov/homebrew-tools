@@ -20,7 +20,7 @@ class Tgbounce < Formula
     venv.pip_install "jq==1.6.0"
     venv.pip_install "telegram-text==0.1.2"
 
-    prefix.install Dir["*"]
+    libexec.install "tgbounce.py"
   end
 
   def tgbounce_log_path
@@ -28,7 +28,7 @@ class Tgbounce < Formula
   end
 
   service do
-    run ["/usr/bin/env", "#{libexec}/bin/python3", opt_prefix/"tgbounce.py"]
+    run ["/usr/bin/env", libexec/"bin/python3", libexec/"tgbounce.py"]
 
     working_dir HOMEBREW_PREFIX
 
