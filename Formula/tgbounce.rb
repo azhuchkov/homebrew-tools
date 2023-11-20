@@ -1,17 +1,25 @@
 class Tgbounce < Formula
+  include Language::Python::Virtualenv
+
   desc "Simple Telegram assistant"
   homepage "https://github.com/azhuchkov/tgbounce"
   url "https://github.com/azhuchkov/tgbounce/archive/refs/heads/main.zip"
   version "0.1.0"
   license "MIT"
 
-  depends_on "python3"
-
   head do
     url "https://github.com/azhuchkov/tgbounce.git", branch: "main"
   end
 
+  depends_on "python3"
+
   def install
+    venv = virtualenv_create(libexec, "python3")
+
+    venv.pip_install "python-telegram==0.18.0"
+    venv.pip_install "jq==1.6.0"
+    venv.pip_install "telegram-text==0.1.2"
+
     prefix.install Dir["*"]
   end
 
@@ -20,9 +28,7 @@ class Tgbounce < Formula
   end
 
   service do
-    environment_variables PATH: std_service_path_env
-
-    run ["/usr/bin/env", "python3", opt_prefix/"tgbounce.py"]
+    run ["/usr/bin/env", "#{libexec}/bin/python3", opt_prefix/"tgbounce.py"]
 
     working_dir HOMEBREW_PREFIX
 
