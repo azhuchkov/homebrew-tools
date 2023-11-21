@@ -12,6 +12,7 @@ class Tgbounce < Formula
   end
 
   depends_on "python3"
+  depends_on "terminal-notifier" => :recommended
 
   def install
     venv = virtualenv_create(libexec, "python3")
