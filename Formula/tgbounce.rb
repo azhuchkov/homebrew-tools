@@ -16,9 +16,7 @@ class Tgbounce < Formula
   def install
     venv = virtualenv_create(libexec, "python3")
 
-    venv.pip_install "python-telegram==0.18.0"
-    venv.pip_install "jq==1.6.0"
-    venv.pip_install "telegram-text==0.1.2"
+    venv.pip_install "-rrequirements.txt"
 
     libexec.install "tgbounce.py"
 
