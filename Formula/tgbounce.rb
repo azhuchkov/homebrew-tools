@@ -41,7 +41,7 @@ class Tgbounce < Formula
   end
 
   service do
-    run ["/usr/bin/env", libexec/"bin/python3", libexec/"tgbounce.py"]
+    run [libexec/"bin/python3", libexec/"tgbounce.py"]
 
     environment_variables PATH: std_service_path_env
 
