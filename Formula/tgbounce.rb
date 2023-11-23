@@ -21,6 +21,16 @@ class Tgbounce < Formula
     libexec.install "tgbounce.py"
 
     share.install ["config.ini", "bounces.json"]
+    
+    (bin/"tgbounce-network").write <<~EOS
+      #!/bin/sh
+      
+      # Send signal to daemon to trigger TCP session update
+    
+      pkill -USR1 -t - -f tgbounce
+    EOS
+
+    chmod 0755, bin/"tgbounce-network"
   end
 
   def caveats
