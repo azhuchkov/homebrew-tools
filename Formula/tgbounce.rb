@@ -3,7 +3,8 @@ class Tgbounce < Formula
 
   desc "Simple Telegram assistant"
   homepage "https://github.com/azhuchkov/tgbounce"
-  url "https://github.com/azhuchkov/tgbounce/archive/refs/heads/main.zip"
+  url "https://github.com/azhuchkov/tgbounce/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "2d5836e0707baf18e9a5e943430301d9c269b9b6b54e2ee448798278d91b5521"
   version "0.1.0"
   license "MIT"
 
