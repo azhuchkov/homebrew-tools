@@ -19,9 +19,9 @@ class Tgbounce < Formula
 
     venv.pip_install "-rrequirements.txt"
 
-    libexec.install "tgbounce.py"
+    libexec.install "src/tgbounce.py"
 
-    share.install ["config.ini", "bounces.json"]
+    prefix.install "share/"
     
     (bin/"tgbounce-network").write <<~EOS
       #!/bin/sh
