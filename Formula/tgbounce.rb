@@ -6,7 +6,7 @@ class Tgbounce < Formula
   url "https://github.com/azhuchkov/tgbounce/archive/refs/tags/v0.3.0.tar.gz"
   sha256 "187786400eafbb755f04fd11d222a83a34e7164533ad2a7fcdfd3106ea04d4e9"
   version "0.3.0"
-  license "MIT"
+  license "GPL-3.0"
 
   head do
     url "https://github.com/azhuchkov/tgbounce.git", branch: "main"
