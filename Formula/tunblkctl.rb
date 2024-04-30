@@ -1,9 +1,9 @@
 class Tunblkctl < Formula
   desc "Command-line frontend for Tunnelblick"
   homepage "https://github.com/azhuchkov/tunblkctl"
-  url "https://github.com/azhuchkov/tunblkctl/archive/refs/tags/v0.4.0.tar.gz"
-  version "0.4.0"
-  sha256 "55f75312cbba6a1b05074061c20f60e8931be8c78320706fe25cba6499a13b9d"
+  url "https://github.com/azhuchkov/tunblkctl/archive/refs/tags/v0.5.0.tar.gz"
+  version "0.5.0"
+  sha256 "875f639c4ad883ee93dbe46442a289b81f5178f9d6eb2a0ef8fe92d9e8cb9394"
   license "MIT"
 
   head do
@@ -18,6 +18,7 @@ class Tunblkctl < Formula
     
     bash_completion.install "completion/bash.sh" => "tunblkctl"
     zsh_completion.install "completion/zsh.sh" => "_tunblkctl"
+    fish_completion.install "completion/fish.sh" => "tunblkctl.fish"
 
     man1.install "doc/man1/tunblkctl.1"
   end
